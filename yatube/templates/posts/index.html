@@ -12,7 +12,7 @@
     {% include 'posts/includes/post_card.html' %}
     {% if post.group is not None %}
       <a href="{% url 'posts:group_list' post.group.slug %}">
-        Все записи группы
+        Все записи сообщества «{{ post.group.title }}»
       </a>
     {% endif %}
     {% if not forloop.last %}<hr>{% endif %}
