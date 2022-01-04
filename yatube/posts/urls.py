@@ -1,5 +1,7 @@
-from django.urls import path, include
-
+"""
+URL-адреса приложения posts.
+"""
+from django.urls import path
 from . import views
 
 app_name = 'posts'
