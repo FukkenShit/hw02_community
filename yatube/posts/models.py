@@ -6,7 +6,10 @@ User = get_user_model()
 
 class Group(models.Model):
     title = models.CharField(max_length=200)
-    slug = models.SlugField(unique=True)
+    slug = models.SlugField(
+        unique=True,
+        help_text='Уникальный идентификатор сообщества.'
+    )
     description = models.TextField()
 
     def __str__(self) -> str:

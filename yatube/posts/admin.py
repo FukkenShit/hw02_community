@@ -9,6 +9,7 @@ class GroupAdmin(admin.ModelAdmin):
         'slug',
         'description',
     )
+    prepopulated_fields = {'slug': ('title',)}
 
 
 class PostAdmin(admin.ModelAdmin):
