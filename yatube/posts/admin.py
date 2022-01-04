@@ -1,13 +1,8 @@
-"""
-Админка приложения posts.
-"""
-
 from django.contrib import admin
 from .models import Post, Group
 
 
 class GroupAdmin(admin.ModelAdmin):
-    """Админка модели Group."""
     list_display = (
         'title',
         'slug',
@@ -16,7 +11,6 @@ class GroupAdmin(admin.ModelAdmin):
 
 
 class PostAdmin(admin.ModelAdmin):
-    """Админка модели Post."""
     list_display = (
         'pk',
         'text',

@@ -1,6 +1,3 @@
-"""
-URL-адреса приложения posts.
-"""
 from django.urls import path
 from . import views
 
