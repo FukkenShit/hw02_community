@@ -8,6 +8,9 @@
   <h1>
     {{ group.title }}
   </h1>
+  <p>
+    {{ group.description|linebreaksbr }}
+  </p>
   {% for post in posts %}
     {% include 'posts/includes/post_card.html' %}
     {% if not forloop.last %}<hr>{% endif %}
