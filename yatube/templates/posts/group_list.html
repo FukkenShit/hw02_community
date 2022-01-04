@@ -1,7 +1,17 @@
 {% extends 'base.html' %}
+
 {% block title %}
-  Лев Толстой – зеркало русской революции.
+  Записи сообщества {{ group.title }}
 {% endblock %}
+
 {% block content %}
-  {{ text }}
+  <h1>
+    {{ group.title }}
+  </h1>
+  {% for post in posts %}
+    {% include 'posts/includes/post_card.html' with post=post %}
+    {% if not forloop.last %}
+      <hr>
+    {% endif %}
+  {% endfor %}
 {% endblock %}
