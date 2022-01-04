@@ -9,7 +9,7 @@
     Последние обновления на сайте
   </h1>
   {% for post in posts %}
-    {% include 'posts/includes/post_card.html' with post=post %}
+    {% include 'posts/includes/post_card.html' %}
     {% if post.group is not None %}
       <a href="{% url 'posts:group_list' post.group.slug %}">
         Все записи группы
