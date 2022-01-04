@@ -15,8 +15,6 @@
         Все записи группы
       </a>
     {% endif %}
-    {% if not forloop.last %}
-      <hr>
-    {% endif %}
+    {% if not forloop.last %}<hr>{% endif %}
   {% endfor %}
 {% endblock %}
