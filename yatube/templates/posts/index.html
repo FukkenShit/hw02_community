@@ -9,14 +9,7 @@
     Последние обновления на сайте
   </h1>
   {% for post in posts %}
-    <article>
-      {% include 'posts/includes/post_card.html' %}
-      {% if post.group is not None %}
-        <a href="{% url 'posts:group_list' post.group.slug %}">
-          Все записи сообщества «{{ post.group.title }}»
-        </a>
-    </article>
-    {% endif %}
+    {% include 'posts/includes/post_card.html' with show_group_link=True %}
     {% if not forloop.last %}<hr>{% endif %}
   {% endfor %}
 {% endblock %}
