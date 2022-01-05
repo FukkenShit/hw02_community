@@ -12,7 +12,9 @@
     {{ group.description|linebreaksbr }}
   </p>
   {% for post in posts %}
-    {% include 'posts/includes/post_card.html' %}
+    <article>
+      {% include 'posts/includes/post_card.html' %}
+    </article>
     {% if not forloop.last %}<hr>{% endif %}
   {% endfor %}
 {% endblock %}
