@@ -1,5 +1,6 @@
 # custom rules for project
 yatube/static/css/bootstrap.min.css
+yatube/sent_emails/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
