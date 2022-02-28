@@ -1,14 +1,17 @@
 {% extends 'base.html' %}
 
 {% block title %}
-  Последние обновления на сайте
+  Профиль пользователя {{ user_.get_full_name }}
 {% endblock %}
 
 {% block content %}
-  <div class="container">
+  <div class="container py-5">
     <h1>
-      Последние обновления на сайте
+      Все записи пользователя {{ user_.get_full_name }}
     </h1>
+    <h3>
+      Всего записей: {{ user_.posts.count }}
+    </h3>
     {% for post in page_obj %}
       {% include 'posts/includes/post_card.html' %}
       {% if not forloop.last %}<hr>{% endif %}
